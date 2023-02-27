@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: caas-vc-config
+  generateName: caas-vc-config2-
   namespace: caas-system
   annotations:
     argocd.argoproj.io/sync-wave: "2"
