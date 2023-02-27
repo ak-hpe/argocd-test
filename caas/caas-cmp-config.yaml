@@ -17,7 +17,6 @@ spec:
             echo "running cmp config....."
             sleep 10
             echo "adding my custom changes"
-            sleep 20
             echo "done....."
           image: "quay.io/helmpack/kubectl-helm-aws:0.1.1"
           imagePullPolicy: IfNotPresent
