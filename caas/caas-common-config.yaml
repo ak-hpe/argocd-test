@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: caas-common-config
+  namespace: caas-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  template:
+    spec:
+      containers:
+        - command:
+          - /bin/bash
+          - c
+          - |-
+            set -e
+            echo "running common config....."
+            sleep 10
+          image: "image: quay.io/helmpack/kubectl-helm-aws:0.1.1"
+          imagePullPolicy: IfNotPresent
+          name: caas-common-config
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 50m
+              memory: 64Mi
+      restartPolicy: Never
