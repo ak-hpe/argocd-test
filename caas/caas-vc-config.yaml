@@ -16,7 +16,7 @@ spec:
             set -e
             echo "running vc config....."
             sleep 10
-          image: "image: quay.io/helmpack/kubectl-helm-aws:0.1.1"
+          image: "quay.io/helmpack/kubectl-helm-aws:0.1.1"
           imagePullPolicy: IfNotPresent
           name: caas-vc-config
           resources:
