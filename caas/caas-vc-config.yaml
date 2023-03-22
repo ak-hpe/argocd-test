@@ -4,6 +4,7 @@ metadata:
   name: caas-vc-config
   namespace: caas-system
   annotations:
+    "helm.sh/hook": post-install,post-upgrade
     argocd.argoproj.io/sync-wave: "2"
 spec:
   ttlSecondsAfterFinished: 100
