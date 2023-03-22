@@ -5,6 +5,7 @@ metadata:
   namespace: caas-system
   annotations:
     argocd.argoproj.io/sync-wave: "3"
+    "helm.sh/hook": post-install,post-upgrade
 spec:
   ttlSecondsAfterFinished: 100
   template:
