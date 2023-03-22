@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: caas-cmp-config3-
+  name: caas-cmp-config3
   namespace: caas-system
   annotations:
     argocd.argoproj.io/sync-wave: "3"
