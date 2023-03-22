@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: aws-ecr-1
+  namespace: caas-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+type: Opaque
+data:
+  aws_secret_access_key: test
+  aws_access_key_id: test
